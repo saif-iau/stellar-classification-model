@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLP</title>
+    <style>
+        *{
+            background-color: antiquewhite;
+            position: relative;
+        }
+        form {
+            display: inline-block;
+        }
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>STELLAR CLASSIFICATION PROJECT</h1>
+    
+    <form action="{{ url_for('predict')}}"method="post">
+        <label>Input the red shift</label>
+    <input type="text" name="redshift" placeholder="redshift" required="required"/>
+    <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+  <h2>{{ result }}</h2>
+</body>
+</html>
